@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Google Maps Style Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <div id="map"></div>
+
+  <div class="panel">
+    <div class="panel-header">
+      <div class="drag-handle"></div>
+      <h1 id="placeName">Click on map</h1>
+      <p id="rating" class="rating">—</p>
+    </div>
+
+    <div class="panel-content">
+      <div class="section">
+        <p class="label">Coordinates</p>
+        <p id="address">—</p>
+      </div>
+
+      <div class="section">
+        <div class="timings-header" onclick="toggleTimings()">
+          <p class="label">Hours</p>
+          <span class="link">View</span>
+        </div>
+
+        <div class="timings" id="timings">
+          <div><span>Monday</span><span>9 AM – 10 PM</span></div>
+          <div><span>Tuesday</span><span>9 AM – 10 PM</span></div>
+          <div><span>Wednesday</span><span>9 AM – 10 PM</span></div>
+          <div><span>Thursday</span><span>9 AM – 10 PM</span></div>
+          <div><span>Friday</span><span>9 AM – 11 PM</span></div>
+          <div><span>Saturday</span><span>8 AM – 11 PM</span></div>
+          <div><span>Sunday</span><span>8 AM – 9 PM</span></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <p class="label">Photos</p>
+        <div class="photos">
+          <div class="photo">Photo</div>
+          <div class="photo">Photo</div>
+          <div class="photo">Photo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
