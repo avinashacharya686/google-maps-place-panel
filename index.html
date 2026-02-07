@@ -3,32 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <title>Google Maps Style Panel</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <div class="app">
-
   <div id="map"></div>
 
-  <div class="panel">
+  <div class="panel" id="panel">
     <div class="panel-header">
-      <div class="drag-handle"></div>
+      <div class="drag-handle" id="dragHandle"></div>
       <h1 id="placeName">Click on map</h1>
       <p id="rating" class="rating">—</p>
     </div>
 
     <div class="panel-content">
       <div class="section">
-        <p class="label">Coordinates</p>
-        <p id="address">—</p>
+        <p class="label">Address</p>
+        <p id="address" class="address">—</p>
       </div>
 
       <div class="section">
@@ -62,6 +60,5 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
