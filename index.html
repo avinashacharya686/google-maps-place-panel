@@ -2,62 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Google Maps Style Panel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google Maps Place Panel</title>
 
+  <!-- Leaflet CSS -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <div class="app">
+  <!-- MAP -->
   <div id="map"></div>
 
+  <!-- SIDE / BOTTOM PANEL -->
   <div class="panel" id="panel">
     <div class="panel-header">
-      <div class="drag-handle" id="dragHandle"></div>
-      <h1 id="placeName">Click on map</h1>
-      <p id="rating" class="rating">—</p>
+      <h2 id="placeName">Tap on map</h2>
+      <span class="rating">⭐ 4.3</span>
     </div>
 
     <div class="panel-content">
-      <div class="section">
-        <p class="label">Address</p>
-        <p id="address" class="address">—</p>
+      <p class="address" id="address">
+        Address will appear here
+      </p>
+
+      <!-- 📸 PHOTO GALLERY -->
+      <div class="photo-gallery">
+        <img src="https://picsum.photos/200/140?1" />
+        <img src="https://picsum.photos/200/140?2" />
+        <img src="https://picsum.photos/200/140?3" />
+        <img src="https://picsum.photos/200/140?4" />
       </div>
 
-      <div class="section">
-        <div class="timings-header" onclick="toggleTimings()">
-          <p class="label">Hours</p>
-          <span class="link">View</span>
-        </div>
+      <button class="toggle-btn" id="toggleTimings">
+        Timings ▾
+      </button>
 
-        <div class="timings" id="timings">
-          <div><span>Monday</span><span>9 AM – 10 PM</span></div>
-          <div><span>Tuesday</span><span>9 AM – 10 PM</span></div>
-          <div><span>Wednesday</span><span>9 AM – 10 PM</span></div>
-          <div><span>Thursday</span><span>9 AM – 10 PM</span></div>
-          <div><span>Friday</span><span>9 AM – 11 PM</span></div>
-          <div><span>Saturday</span><span>8 AM – 11 PM</span></div>
-          <div><span>Sunday</span><span>8 AM – 9 PM</span></div>
-        </div>
-      </div>
-
-      <div class="section">
-        <p class="label">Photos</p>
-        <div class="photos">
-          <div class="photo">Photo</div>
-          <div class="photo">Photo</div>
-          <div class="photo">Photo</div>
-        </div>
-      </div>
+      <ul class="timings hidden" id="timings">
+        <li>Mon–Fri: 9 AM – 9 PM</li>
+        <li>Sat: 10 AM – 8 PM</li>
+        <li>Sun: Closed</li>
+      </ul>
     </div>
   </div>
 </div>
 
+<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="script.js"></script>
 </body>
